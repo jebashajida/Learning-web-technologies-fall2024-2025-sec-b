@@ -1,0 +1,31 @@
+<students>
+   <student>
+    <si_no>23</sl_no>
+     <student_first_name>John</student_first_name>
+     <student_last_name>Caeter</student_last_name>
+     <admission_day>25</admission_day>
+     <admission_month>12</admission_month>
+     <admission_year>2015</admisson_year>
+    </student>
+<student>
+    <si_no>29</sl_no>
+    <student_first_name>Bob</student_first_nam>
+    <student_last_name>Marsal</student_last_name>
+    <admission_day>13</admission_day>
+     <admission_month>1</admission_month>
+     <admission_year>1999</admisson_year>
+     
+    </student>
+<student>
+    <si_no>35</sl_no>
+     <student_first_name>Clark</student_first_name>
+     <student_last_name>Kent</student_last_nam>
+     <admission_day>13</admission_day>
+     <admission_month>1</admission_month>
+     <admission_year>1999</admisson_year>
+     
+    </student>
+
+ </students>   
+
+
