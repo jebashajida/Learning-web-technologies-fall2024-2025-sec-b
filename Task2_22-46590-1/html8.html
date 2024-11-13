@@ -1,15 +1,76 @@
+<!DOCTYPE html>
 <html lang="en">
-   <head>
-    <title>Degree</title>
-     </head>   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+</head>
 <body>
-           Degree: <br>
-    
-    <input type="radio" name="" value="m">SSC
-    <input type="radio" name="" value="f">HSC
-    <input type="radio" name="" value="o">BSc
-    <br><input type="submit" value= "Submit" name="">
-    
+    <form action="new 1.html">
+        <table border="1" height="460" width="400">
+            <tr>
+                <td colspan="2" align="center" height="40"><h3>Person Profile</h3></td>
+            </tr>
+            <tr >
+                <td>Name:</td>
+                <td><input type="text" placeholder="Type Your Name" name="Username"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="Mail" placeholder="Email" name="Email"></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="Gender" value="m">Male
+                    <input type="radio" name="Gender" value="f">Female
+                    <input type="radio" name="Gender" value="o">Other
+                </td>
+            </tr>
+            <tr>
+                <td>Date of Birth:</td>
+                <td><input type="date"></td>
+            </tr>           
+            <tr>
+                    <td>Blood Group:</td>
+                    <td>
+                        <select name="BloodGrp">
+                            <option>A+</option>
+                            <option>A-</option>
+                            <option>B+</option>
+                            <option>B-</option>
+                            <option>AB+</option>
+                            <option>AB-</option>
+                            <option>O+</option>
+                            <option>O-</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Degree:</td>
+                    <td>
+                        <input type="radio" name="" value="s">SSC
+                        <input type="radio" name="" value="h">HSC
+                        <input type="radio" name="" value="b">BSc
+                        <input type="radio" name="" value="m">MSc
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>Photo:</td>
+                    <td><input type="image"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" height="30"></td>
+
+                </tr>
+                <tr><td colspan="2" align="right">
+                    <input type="submit" value= "Submit" name="">
+                    <input type="reset" value= "Reset" name="">
+                    </td>
+                </tr>
+              
+        </table>
+    </form>
 </body>
 </html>
-    
