@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer Availability Calendar</title>
+    <style>
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            text-align: center;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .day {
+            padding: 10px;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+
+        .available {
+            background-color: green;
+            color: white;
+        }
+
+        .unavailable {
+            background-color: red;
+            color: white;
+        }
+
+        .client-view .day {
+            cursor: not-allowed;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const calendar = document.querySelector('.calendar');
+            const toggleModeButton = document.getElementById('toggleMode');
+            let editMode = true; // Freelancers can edit by default
+
+            toggleModeButton.addEventListener('click', () => {
+                editMode = !editMode;
+                toggleModeButton.textContent = editMode ? 'Switch to Client View' : 'Switch to Freelancer Edit Mode';
+                calendar.classList.toggle('client-view', !editMode);
+            });
+
+            calendar.addEventListener('click', (e) => {
+                if (!editMode || !e.target.classList.contains('day')) return;
+
+                e.target.classList.toggle('available');
+                e.target.classList.toggle('unavailable');
+            });
+
+            // Generate calendar days dynamically
+            for (let i = 1; i <= 31; i++) {
+                const dayDiv = document.createElement('div');
+                dayDiv.textContent = `Day ${i}`;
+                dayDiv.className = 'day unavailable';
+                calendar.appendChild(dayDiv);
+            }
+        });
+    </script>
+</head>
+<body>
+    <form action="availability_calender_php." method="POST"></form>
+    <h1>Freelancer Availability Calendar</h1>
+    <button id="toggleMode">Switch to Client View</button>
+    <div class="calendar">
+        <!-- Days are generated dynamically -->
+    </div>
+</body>
+</html>
